@@ -1,0 +1,46 @@
+{
+  "manifest_version": 2,
+  "name": "Dutch Waze Kit",
+  "author": "Musa Semou",
+  "version": "1.0",
+  "description": "Verbeteringen voor WME, op maat gemaakt voor de Nederlandse Waze community.",
+  "permissions": ["contextMenus"],
+  "background": {
+    "scripts": ["extension.js"]
+  },
+  "icons": {
+    "16": "img/icon@16.png",
+    "48": "img/icon@48.png",
+    "128": "img/icon@128.png"
+  },
+  "web_accessible_resources": [
+    "img/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.waze.com/editor*"],
+      "css": [
+        "lib/css/vanillatoasts.css",
+        "lib/css/dwk.css"
+      ],
+      "js": [
+        "browser-fallback.js",
+        "lib/ClassObserver.js",
+        "lib/CreationObserver.js",
+        "lib/proj4.js",
+        "lib/vanillatoasts.js",
+        "features/dwk-preferences.js",
+        "features/open-in-bag.js",
+        "features/open-in-ruimtelijke-plannen.js",
+        "features/open-in-google-maps.js",
+        "features/open-in-melvin.js",
+        "features/open-in-mapillary.js",
+        "features/open-closure-in-melvin.js",
+        "features/more-info-addons.js",
+        "features/waze-logo-nl.js",
+        "features/look-up-address.js",
+        "dutch-waze-kit.js"
+      ]
+    }
+  ]
+}

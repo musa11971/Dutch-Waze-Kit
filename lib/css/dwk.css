@@ -1,0 +1,58 @@
+#dwk-preferences {
+    display: block;
+    padding: 10px 0;
+    margin-top: 10px;
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+}
+
+.dwk-fix-input-value {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 1px solid #bbb;
+}
+
+.dwk-closure-item {
+    display: block;
+    padding: 4px 0;
+    text-align: center;
+    text-decoration: none;
+}
+.dwk-closure-item:hover {
+    background: #f2f4f7;
+    text-decoration: none;
+}
+
+.dwk-look-up-address-button {
+    padding: 2px;
+    border: 1px solid #dadada;
+    border-radius: 8px;
+    display: block;
+
+    background-position: center center;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.dwk-look-up-address-button:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.dwk-feature-description {
+    padding: 2px;
+    font-weight: bold;
+    display: inline-block;
+    color: #bebec5;
+}
+.dwk-feature-description:hover {
+    cursor: help;
+}
+
+.dwk-version {
+    font-size: 10px;
+    font-style: italic;
+    color: #bebec5;
+    font-weight: bold;
+}
