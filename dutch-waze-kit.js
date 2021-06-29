@@ -1,6 +1,6 @@
 // Create DWK helper object
 let dwk = {
-    version: '1.0',
+    version: '1.1',
     logHistory: [],
 
     features: [
