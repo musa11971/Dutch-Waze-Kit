@@ -18,7 +18,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.waze.com/editor*"],
+      "matches": ["https://*.waze.com/*editor*"],
       "css": [
         "lib/css/vanillatoasts.css",
         "lib/css/dwk.css"
