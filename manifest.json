@@ -35,6 +35,7 @@
         "features/open-in-google-maps.js",
         "features/open-in-melvin.js",
         "features/open-in-mapillary.js",
+        "features/open-in-wegstatus.js",
         "features/open-closure-in-melvin.js",
         "features/more-info-addons.js",
         "features/waze-logo-nl.js",

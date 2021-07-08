@@ -47,6 +47,13 @@ let dwk = {
             canBeDisabled: false
         },
         {
+            name: 'Kaart openen in Wegstatus',
+            description: 'Klik met de rechter muisknop op de kaart, kies "Dutch Waze Kit" -> "Openen in Wegstatus".',
+            feature: openInWegstatus,
+            hidden: false,
+            canBeDisabled: false
+        },
+        {
             name: 'Closure openen in Melvin',
             description: 'Klik op de 3 puntjes bij een closure in de closures tab, kies "Openen in Melvin". Dit werkt alleen als een Melvin ID in de closure titel staat.',
             feature: openClosureInMelvin,
