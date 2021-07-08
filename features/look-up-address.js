@@ -41,13 +41,17 @@ let lookUpAddress = {
         googleButton.addEventListener('mouseenter', this.updateURLs.bind(this));
         mapsButton.addEventListener('mouseenter', this.updateURLs.bind(this));
 
-        document.querySelector(this.addressSelector).parentElement.append(googleButton);
-        document.querySelector(this.addressSelector).parentElement.append(mapsButton);
+        let parent = document.querySelector(this.addressSelector).parentElement;
+        parent.style.position = 'relative';
+        parent.append(googleButton);
+        parent.append(mapsButton);
 
         // Make both buttons the same size
-        googleButton.style.width = (googleButton.clientHeight + 4) + 'px';
-        mapsButton.style.width = (googleButton.clientHeight + 4) + 'px';
-        mapsButton.style.height = googleButton.clientHeight + 'px';
+        googleButton.style.height = (parent.clientHeight / 2) + 'px';
+        mapsButton.style.height = (parent.clientHeight / 2) + 'px';
+
+        // Offset the maps button so that they are not stacked
+        mapsButton.style.top = (parent.clientHeight / 2) + 'px';
 
         this.googleButton = googleButton;
         this.mapsButton = mapsButton;

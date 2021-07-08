@@ -27,6 +27,7 @@
 .dwk-look-up-address-button {
     padding: 2px;
     border: 1px solid #dadada;
+    background-color: #fff;
     border-radius: 8px;
     display: block;
 
@@ -34,10 +35,18 @@
     -webkit-background-size: contain;
     background-size: contain;
     background-repeat: no-repeat;
+
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
 .dwk-look-up-address-button:hover {
     cursor: pointer;
-    background-color: #fff;
+    background-color: #bbb;
 }
 
 .dwk-feature-description {
