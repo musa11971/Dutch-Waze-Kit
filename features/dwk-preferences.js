@@ -80,7 +80,8 @@ let dwkPreferences = {
 
             let listItem = document.createElement('li');
 
-            let checkbox = document.createElement('input');
+            // Checkbox disabled because features are currently always enabled
+            /*let checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
             checkbox.checked = feature.feature.enabled;
 
@@ -90,6 +91,7 @@ let dwkPreferences = {
             }
 
             listItem.appendChild(checkbox);
+            */
 
             let featureName = document.createElement('span');
             featureName.innerText = ' ' + feature.name + ' ';
