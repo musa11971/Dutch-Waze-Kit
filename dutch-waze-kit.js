@@ -33,6 +33,13 @@ let dwk = {
             canBeDisabled: false
         },
         {
+            name: 'Kaart openen in Satelliet Data Portaal',
+            description: 'Klik met de rechter muisknop op de kaart, kies "Dutch Waze Kit" -> "Openen in Satelliet Data Portaal".',
+            feature: openInSatellietDataPortaal,
+            hidden: false,
+            canBeDisabled: false
+        },
+        {
             name: 'Kaart openen in Google Maps',
             description: 'Klik met de rechter muisknop op de kaart, kies "Dutch Waze Kit" -> "Openen in Google Maps".',
             feature: openInGoogleMaps,

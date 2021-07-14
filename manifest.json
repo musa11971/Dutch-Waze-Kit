@@ -32,6 +32,7 @@
         "features/dwk-preferences.js",
         "features/open-in-bag.js",
         "features/open-in-ruimtelijke-plannen.js",
+        "features/open-in-satelliet-data-portaal.js",
         "features/open-in-google-maps.js",
         "features/open-in-melvin.js",
         "features/open-in-mapillary.js",

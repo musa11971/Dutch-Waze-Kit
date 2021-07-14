@@ -30,6 +30,12 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
+    id: 'dwk-open-in-satelliet-data-portaal',
+    title: "Openen in Satelliet Data Portaal",
+    parentId: 'dutch-waze-kit'
+});
+
+browser.contextMenus.create({
     id: 'dwk-open-in-google-maps',
     title: "Openen in Google Maps",
     parentId: 'dutch-waze-kit'
@@ -65,6 +71,10 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
         }
         case 'dwk-open-in-ruimtelijke-plannen': {
             browser.tabs.sendMessage(tab.id, { text: 'open-in-ruimtelijke-plannen' });
+            break;
+        }
+        case 'dwk-open-in-satelliet-data-portaal': {
+            browser.tabs.sendMessage(tab.id, { text: 'open-in-satelliet-data-portaal' });
             break;
         }
         case 'dwk-open-in-google-maps': {
