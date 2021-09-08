@@ -1,6 +1,6 @@
 // Create DWK helper object
 let dwk = {
-    version: '1.2',
+    version: '1.3',
     logHistory: [],
 
     features: [
@@ -151,7 +151,7 @@ let dwk = {
     getCurrentMapZoomLevel() {
         let permalink = document.getElementsByClassName('permalink')[0].href;
 
-        return parseInt(permalink.match(/zoom=([0-9])/)[1]);
+        return parseInt(permalink.match(/zoomLevel=([0-9])/)[1]);
     },
 
     // Shows a toast

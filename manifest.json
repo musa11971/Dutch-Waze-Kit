@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Dutch Waze Kit",
   "author": "Musa Semou",
-  "version": "1.2",
+  "version": "1.3",
   "description": "Verbeteringen voor WME, op maat gemaakt voor de Nederlandse Waze community.",
   "permissions": ["contextMenus"],
   "background": {
