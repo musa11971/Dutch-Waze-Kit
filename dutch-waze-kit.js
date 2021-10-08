@@ -1,6 +1,22 @@
 // Create DWK helper object
 let dwk = {
-    version: '1.3',
+    // Constants
+    version: '1.4',
+
+    zoomLevels: {
+        /**
+         * min: the minimum zoom level (most zoomed out)
+         * max: the maximum zoom level (most zoomed in)
+         * amplify: how many levels to boost the result with when this zoom level is converted to
+         */
+        waze: { min: 12, max: 22, amplify: 0 },
+        bag: { min: 0, max: 7, amplify: 2 },
+        satellietDataPortaal: { min: 8, max: 18, amplify: 4 },
+        googleMaps: { min: 0, max: 20, amplify: 6 },
+        mapillary: { min: 0, max: 20, amplify: 6 },
+    },
+
+    ////////////
     logHistory: [],
 
     features: [
@@ -151,7 +167,7 @@ let dwk = {
     getCurrentMapZoomLevel() {
         let permalink = document.getElementsByClassName('permalink')[0].href;
 
-        return parseInt(permalink.match(/zoomLevel=([0-9])/)[1]);
+        return parseInt(permalink.match(/zoomLevel=([0-9]+)/)[1]);
     },
 
     // Shows a toast
@@ -182,27 +198,21 @@ let dwk = {
 
     // Copies the given text to clipboard
     copyToClipboard(text) {
-        let textArea = document.createElement("textarea");
+        let textArea = document.createElement('textarea');
 
-        // Place in the top-left corner of screen regardless of scroll position.
         textArea.style.position = 'fixed';
         textArea.style.top = 0;
         textArea.style.left = 0;
 
-        // Ensure it has a small width and height. Setting to 1px / 1em
-        // doesn't work as this gives a negative w/h on some browsers.
         textArea.style.width = '2em';
         textArea.style.height = '2em';
 
-        // We don't need padding, reducing the size if it does flash render.
         textArea.style.padding = 0;
 
-        // Clean up any borders.
         textArea.style.border = 'none';
         textArea.style.outline = 'none';
         textArea.style.boxShadow = 'none';
 
-        // Avoid flash of the white box if rendered for any reason.
         textArea.style.background = 'transparent';
 
         textArea.value = text;
@@ -212,14 +222,30 @@ let dwk = {
         textArea.select();
 
         try {
-            var successful = document.execCommand('copy');
-            var msg = successful ? 'successful' : 'unsuccessful';
-            console.log('Copying text command was ' + msg);
+            let successful = document.execCommand('copy');
+            let msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Dutch Waze Kit: Copying text command was ' + msg);
         } catch (err) {
-            console.log('Oops, unable to copy');
+            console.log('Dutch Waze Kit: Oops, unable to copy');
         }
 
         document.body.removeChild(textArea);
+    },
+
+    // Converts a zoom level from one service to another
+    convertZoomLevel(level, fromZoomLevel, toZoomLevel) {
+        let result = (level - fromZoomLevel.min) * (toZoomLevel.max - toZoomLevel.min) / (fromZoomLevel.max - fromZoomLevel.min) + toZoomLevel.min;
+
+        // Amplify zoom result
+        result += toZoomLevel.amplify;
+
+        // Restrict zoom level to the maximum
+        if(result > toZoomLevel.max)
+            result = toZoomLevel.max;
+
+        dwk.log('Zoomlevel ' + level + ' omgezet van stelsel (' + fromZoomLevel.min + '-' + fromZoomLevel.max + ') naar stelsel (' + toZoomLevel.min + '-' + toZoomLevel.max + ') = ' + result);
+
+        return result;
     }
 };
 

@@ -15,7 +15,7 @@ let openInBAG = {
         // Find correct zoom level
         let zoom = dwk.getCurrentMapZoomLevel();
 
-        if(zoom > 7) zoom = 7;
+        zoom = dwk.convertZoomLevel(zoom, dwk.zoomLevels.waze, dwk.zoomLevels.bag);
 
         // Create and open URL
         let url = 'https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html#?geometry.x=' + transformedCoordinates.x + '&geometry.y=' + transformedCoordinates.y + '&zoomlevel=' + zoom;
