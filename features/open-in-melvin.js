@@ -13,7 +13,7 @@ let openInMelvin = {
         let coordinates = dwk.getCurrentMapCoordinates();
 
         // Create and open URL
-        let url = 'https://melvin.ndw.nu/public;sw=' + coordinates.y + ',' + coordinates.x + ';ne=' + coordinates.y + ',' + coordinates.x;
+        let url = 'https://melvin.ndw.nu/public?sw=' + coordinates.y + ',' + coordinates.x + '&ne=' + coordinates.y + ',' + coordinates.x;
         window.open(url, '_blank');
     }
 };
