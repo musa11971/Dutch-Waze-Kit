@@ -1,7 +1,7 @@
 // Create DWK helper object
 let dwk = {
     // Constants
-    version: '1.4',
+    version: '1.4.1',
 
     zoomLevels: {
         /**
