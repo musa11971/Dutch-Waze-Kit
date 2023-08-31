@@ -12,13 +12,8 @@ let openInBAG = {
         // Transform coordinates
         let transformedCoordinates = proj4('EPSG:4326', 'EPSG:28992', dwk.getCurrentMapCoordinates());
 
-        // Find correct zoom level
-        let zoom = dwk.getCurrentMapZoomLevel();
-
-        zoom = dwk.convertZoomLevel(zoom, dwk.zoomLevels.waze, dwk.zoomLevels.bag);
-
         // Create and open URL
-        let url = 'https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html#?geometry.x=' + transformedCoordinates.x + '&geometry.y=' + transformedCoordinates.y + '&zoomlevel=' + zoom;
+        let url = 'https://bagviewer.kadaster.nl/lvbag/bag-viewer/?geometry.x=' + transformedCoordinates.x + '&geometry.y=' + transformedCoordinates.y + '&zoomlevel=13.776830703977048';
         window.open(url, '_blank');
     }
 };

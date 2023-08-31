@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
   "name": "Dutch Waze Kit",
-  "author": "Musa Semou",
-  "version": "1.4",
+  "author": "Musa Semou / Robin Breman",
+  "version": "1.4.2",
   "description": "Verbeteringen voor WME, op maat gemaakt voor de Nederlandse Waze community.",
   "permissions": ["contextMenus"],
   "background": {
