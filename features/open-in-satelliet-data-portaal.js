@@ -18,7 +18,7 @@ let openInSatellietDataPortaal = {
         zoom = dwk.convertZoomLevel(zoom, dwk.zoomLevels.waze, dwk.zoomLevels.satellietDataPortaal);
 
         // Create and open URL
-        let url = 'https://www.satellietdataportaal.nl/?base=brtachtergrondkaart&loc=' + coordinates.y + '%2C' + coordinates.x + '%2C' + zoom + 'z&overlay=mos-0';
+        let url = 'https://viewer.satellietdataportaal.nl/@' + coordinates.y + ',' + coordinates.x + ',' + zoom;
         window.open(url, '_blank');
     }
 };
