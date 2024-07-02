@@ -1,10 +1,15 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Dutch Waze Kit",
   "author": "Musa Semou",
   "version": "1.4.2",
   "description": "Verbeteringen voor WME, op maat gemaakt voor de Nederlandse Waze community.",
-  "permissions": ["contextMenus"],
+  "permissions": [
+    "contextMenus"
+  ],
+  "host_permissions": [
+    "https://*.waze.com/*"
+  ],
   "background": {
     "scripts": ["extension.js"]
   },
@@ -14,7 +19,10 @@
     "128": "img/icon@128.png"
   },
   "web_accessible_resources": [
-    "img/*"
+    {
+      "resources": ["img/*"],
+      "matches": ["*://*/*"]
+    }
   ],
   "content_scripts": [
     {
