@@ -49,9 +49,9 @@ let dwk = {
             canBeDisabled: false
         },
         {
-            name: 'Kaart openen in Ruimtelijke Plannen',
-            description: 'Klik met de rechter muisknop op de kaart, kies "Dutch Waze Kit" -> "Openen in Ruimtelijke Plannen".',
-            feature: openInRuimtelijkePlannen,
+            name: 'Kaart openen in Omgevingsloket',
+            description: 'Klik met de rechter muisknop op de kaart, kies "Dutch Waze Kit" -> "Openen in Omgevingsloket".',
+            feature: openInOmgevingsloket,
             hidden: false,
             canBeDisabled: false
         },

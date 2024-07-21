@@ -14,7 +14,7 @@ let dwkContextMenu = {
 
         this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-bag">Openen in BAG</button></li>`;
         this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-melvin">Openen in Melvin</button></li>`;
-        this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-ruimtelijke-plannen">Openen in Ruimtelijke Plannen</button></li>`;
+        this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-omgevingsloket">Openen in Omgevingsloket</button></li>`;
         this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-satelliet-data-portaal">Openen in Satelliet Data Portaal</button></li>`;
         this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-google-maps">Openen in Google Maps</button></li>`;
         this.contextMenuEl.innerHTML += `<li><button type="button" data-action="dwk-open-in-mapillary">Openen in Mapillary</button></li>`;
@@ -41,7 +41,7 @@ let dwkContextMenu = {
             switch(e.target.dataset.action) {
                 case 'dwk-open-in-bag' : return openInBAG.openBAGViewer();
                 case 'dwk-open-in-melvin' : return openInMelvin.openMelvin();
-                case 'dwk-open-in-ruimtelijke-plannen' : return openInRuimtelijkePlannen.openRuimtelijkePlannen();
+                case 'dwk-open-in-omgevingsloket' : return openInOmgevingsloket.openOmgevingsloket();
                 case 'dwk-open-in-satelliet-data-portaal' : return openInSatellietDataPortaal.openSatellietDataPortaal();
                 case 'dwk-open-in-google-maps' : return openInGoogleMaps.openGoogleMaps();
                 case 'dwk-open-in-mapillary' : return openInMapillary.openMapillary();

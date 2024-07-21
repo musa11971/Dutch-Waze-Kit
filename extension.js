@@ -24,8 +24,8 @@ browser.contextMenus.create({
 });
 
 browser.contextMenus.create({
-    id: 'dwk-open-in-ruimtelijke-plannen',
-    title: "Openen in Ruimtelijke Plannen",
+    id: 'dwk-open-in-omgevingsloket',
+    title: "Openen in Omgevingsloket",
     parentId: 'dutch-waze-kit'
 });
 
@@ -69,8 +69,8 @@ browser.contextMenus.onClicked.addListener(function(info, tab) {
             browser.tabs.sendMessage(tab.id, { text: 'open-in-melvin' });
             break;
         }
-        case 'dwk-open-in-ruimtelijke-plannen': {
-            browser.tabs.sendMessage(tab.id, { text: 'open-in-ruimtelijke-plannen' });
+        case 'dwk-open-in-omgevingsloket': {
+            browser.tabs.sendMessage(tab.id, { text: 'open-in-omgevingsloket' });
             break;
         }
         case 'dwk-open-in-satelliet-data-portaal': {
