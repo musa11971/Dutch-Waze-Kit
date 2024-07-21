@@ -37,6 +37,7 @@
         "lib/CreationObserver.js",
         "lib/proj4.js",
         "lib/vanillatoasts.js",
+        "features/dwk-context-menu.js",
         "features/dwk-preferences.js",
         "features/open-in-bag.js",
         "features/open-in-ruimtelijke-plannen.js",

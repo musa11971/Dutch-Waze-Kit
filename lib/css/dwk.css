@@ -65,3 +65,109 @@
     color: #bebec5;
     font-weight: bold;
 }
+
+.dwk-cm-trigger {
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    border: 0;
+    border-radius: 50%;
+
+    background-color: transparent;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    width: 35px;
+    height: 35px;
+
+    position: absolute;
+    z-index: 1;
+    bottom: 65px;
+    left: 85px;
+}
+
+.compact-density .dwk-cm-trigger {
+    left: 62px;
+}
+
+.show-sidebar ~ .dwk-cm-trigger {
+    left: 415px;
+}
+
+.compact-density .show-sidebar ~ .dwk-cm-trigger {
+    left: 392px;
+}
+
+.dwk-cm {
+    position: absolute;
+    z-index: 1;
+    bottom: calc(100% + 13px);
+    left: 0;
+    display: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    line-height: 1;
+    text-indent: 0;
+    text-align: left;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.dwk-cm.is-open {
+    display: block;
+}
+
+.dwk-cm::before {
+    position: absolute;
+    top: 100%;
+    left: 11px;
+    display: block;
+    content: '';
+    width: 0; 
+    height: 0; 
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 7px solid white;
+}
+
+.dwk-cm li {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.dwk-cm button {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 15px 20px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1;
+    text-decoration: none;
+    text-align: left;
+    appearance: none;
+    border: 0;
+    border-bottom: 1px solid #eee;
+    background: transparent;
+}
+
+.dwk-cm button:hover {
+    background: #f2f4f7;
+}
+
+.dwk-cm li:first-child button {
+    border-radius: 10px 10px 0 0;
+}
+
+.dwk-cm li:last-child button {
+    border-bottom: 0;
+    border-radius: 0 0 10px 10px;
+}

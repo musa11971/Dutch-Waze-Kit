@@ -28,6 +28,13 @@ let dwk = {
             canBeDisabled: false
         },
         {
+            name: 'Context menu',
+            description: null,
+            feature: dwkContextMenu,
+            hidden: false,
+            canBeDisabled: false
+        },
+        {
             name: 'Kaart openen in BAG',
             description: 'Klik met de rechter muisknop op de kaart, kies "Dutch Waze Kit" -> "Openen in BAG".',
             feature: openInBAG,
@@ -140,14 +147,10 @@ let dwk = {
         // Initialize all features
         dwk.log('Initializing features at attempt ' + attempt + '!');
 
-        let featureNumber = 1;
-
         this.features.forEach((feature) => {
             dwk.log('Initializing feature ' + feature.name);
             feature.feature.init();
             dwk.log('Initialized feature ' + feature.name + '!');
-
-            featureNumber++;
         });
 
         dwk.log('All features initialized.');
